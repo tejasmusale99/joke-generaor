@@ -10,10 +10,15 @@ const options={
         "X-Api-key":apikey,
     },
 };
-function clickHandler(){
-    // console.log("click")
-    const response=fetch(serverURL,options)
-    .then(response=>response.json())
-    .then(json=>getJoke.innerText=json[0].joke)
+async function clickHandler(){
+    const response=await fetch(serverURL,options)
+    const Data=await(response.json())
+    console.log(getJoke.innerText=Data[0].joke)
+
+// using promises
+
+    // .then(response=>response.json())
+    // .then(json=>console.log(json))
+    // .then(json=>getJoke.innerText=json[0].joke)
 }
 jokeBtn.addEventListener("click",clickHandler)

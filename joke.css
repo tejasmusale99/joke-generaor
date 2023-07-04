@@ -16,6 +16,8 @@ h1{
   
 }
 .container{
+    margin: 10px;
+    padding: 10px;
     background-color: rgb(42, 37, 37);
     display: flex;
     color: white;
@@ -54,3 +56,16 @@ footer{
     bottom: 1rem;
     right: 1rem;
 }
+
+@media (max-width:376px) {
+    .container{
+        width:320px;
+        height: 320px;
+    }
+ }
+ @media (max-width:500px) {
+    .container{
+        width:250px;
+        height: 350px;
+    }
+ }
